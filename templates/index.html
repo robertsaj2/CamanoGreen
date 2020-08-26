@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block description %}MicrogreensNW delivers fresh, live microgreens to your door.  Sign up for delivery today!{% endblock %}
+{% block title %}MicrogreensNW{% endblock %}
+{% block content %}
+    <div class="row">
+      <div class="col-md-10 mx-auto">
+        <p>Sign up for microgreens to be delivered right to your door!</p>
+        <p><a href="/contact">Send us an email</a> or <a href="tel:+4252246648">call</a> to get started today!</p>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-10 mx-auto">
+        <div class="row">
+            <div class="col-sm-12 col-md-9">
+                <p>
+                    Our microgreens are grown hydroponically on coconut fiber pads.  We grow on coconut fiber pads as opposed to soil so that we can deliver you a live product without creating a mess in the kitchen.  Delivering you the live product ensures that product is literally as fresh as possible, maximizing nutrition. In addition extends the shelf life, simply put a little water in the container and the plants will continue to live.  
+                </p>
+            </div>
+            <div class="col-sm-12 col-md-3 my-auto">
+                <figure class="figure">
+                <!-- <figcaption class="figure-caption">Yay micros</figcaption> -->
+                <img src="{{ url_for('static',filename='img/microgreens-in-hands.jpg') }}"  class="figure-img img-fluid rounded" alt="live microgreens prior to being harvested">
+              </figure>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-9">
+                <p>
+                    You can harvest the plants on an as needed basis.  To harvest our microgreens, use scissors or a knife to cut off the amount you need for your meal.  
+                </p>
+            </div>
+            <div class="col-sm-12 col-md-3 my-auto">
+                <figure class="figure d-block">
+                <!-- <figcaption class="figure-caption">Hooray micros</figcaption> -->
+                <img src="{{ url_for('static',filename='img/microgreens-in-hands2.jpg') }}"  class="figure-img img-fluid rounded" alt="harvest microgreens, ready to eat">
+              </figure>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-9">
+                <p>
+                    Once you've harvested, you're ready to eat.  We recommend harvesting at meal time rather than all at once for maximum freshness!
+                </p>
+            </div>
+            <div class="col-sm-12 col-md-3 my-auto">
+                <figure class="figure d-block">
+                <!-- <figcaption class="figure-caption">Hooray micros</figcaption> -->
+                <img src="{{ url_for('static',filename='img/microgreens-in-hands2.jpg') }}"  class="figure-img img-fluid rounded" alt="harvest microgreens, ready to eat">
+              </figure>
+            </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}

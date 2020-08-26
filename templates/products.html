@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% block description %}At MicrogreensNW we deliver high quality, live, and locally produced microgreens.  You harvest when you're ready to eat, which guarantees the freshest possible product!{% endblock %}
+{% block title %}About MicrogreensNW{% endblock %}
+{% block content %}
+<div class="row">
+  <div class="col-10 mx-auto">
+    <div class="row">
+      <div class="col-sm-12 col-md-9 mx-auto">
+        <div class="post-preview">
+          <a href="products/red-russian-kale">
+            <h2 class="post-title">
+              Leek Micros
+            </h2>
+            <p>
+              Thin green leaves with tiny black seeds attached. Leeks are similar to scallions, onions or garlic. They have a mild onion-like taste, a bit less bitter than scallions.  Leeks add color and flavor to any dish. A distinct taste and long-lasting aftertaste that goes well with many meal combinations, either as a central feature or side garnish.
+            </p>
+          </a>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-3 mx-auto">
+        <figure class="figure">
+          <!-- <figcaption class="figure-caption">Google Trends for Microgreens (Past 5 Years).</figcaption> -->
+          <img src="{{ url_for('static',filename='img/true-leaf/true-leaf-leek-microgreens.jpg') }}"  class="figure-img img-fluid rounded" alt="an image google trends microgreens searches over the last 5 years.">
+        </figure>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-9 mx-auto">
+        <div class="post-preview">
+          <a href="products/broccoli">
+            <h2 class="post-title">
+              Broccoli
+            </h2>
+            <p>
+              Broccoli microgreens have a delicious mild, fresh broccoli flavor. They are super tasty and is an excellent choice as a base for any microgreen salad and can be a perfect compliment for egg salad, chicken salad, and other vegetable based dishes.
+            </p>
+          </a>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-3 mx-auto">
+        <figure class="figure">
+          <!-- <figcaption class="figure-caption">Google Trends for Microgreens (Past 5 Years).</figcaption> -->
+          <img src="{{ url_for('static',filename='img/true-leaf/true-leaf-broccoli-microgreens.jpg') }}"  class="figure-img img-fluid rounded" alt="an image google trends microgreens searches over the last 5 years.">
+        </figure>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-9 mx-auto">
+        <div class="post-preview">
+          <a href="products/china-rose-radish">
+            <h2 class="post-title">
+              Kohlrabi: Purple Vienna
+            </h2>
+            <p>
+              These micros can be used to add flavor, texture, and visual appeal to mixed salads. Purple Vienna yields medium to dark green leaves with stems that range from whitish purple to medium purple in color.  Take advantage of their vibrant color to add visual appeal to any dish. Add just before serving, to avoid wilting the leaves and robbing the microgreens of their crunch.
+            </p>
+          </a>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-3 mx-auto">
+        <figure class="figure">
+          <!-- <figcaption class="figure-caption">Google Trends for Microgreens (Past 5 Years).</figcaption> -->
+          <img src="{{ url_for('static',filename='img/true-leaf/true-leaf-kohlrabi-purple-vienna-microgreens.jpg') }}"  class="figure-img img-fluid rounded" alt="an image google trends microgreens searches over the last 5 years.">
+        </figure>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
