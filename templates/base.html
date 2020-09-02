@@ -13,7 +13,7 @@
     <title>{% block title %}{% endblock %}</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="{{ url_for('static',filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{url_for('static',filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
     <link href="{{ url_for('static',filename='vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
@@ -25,12 +25,13 @@
   </head>
   
   <body class="container-fluid">
+
        <!-- Navigation -->
-       <nav class="row navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" style="height: 75px; background-color: rgb(240, 240, 240); box-shadow: 0 4px 2px -2px gray;">
+       <nav class="row navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" style="height: 75px; background: rgb(198,255,191);
+       background: linear-gradient(170deg, rgba(198,255,191,1) 25%, rgba(180,180,255,1) 100%); box-shadow: 0 4px 2px -2px gray;">
         <div class="container-fluid">
           <a class="navbar-brand" href="/">
             <div class="d-flex row align-items-center">
-  
               <div class="col-sm">
                 <img src="{{url_for('static', filename='assets/camanogreen-logo-only1.png')}}" style="height: 50px; width: 50px"/>
               </div>
@@ -68,37 +69,9 @@
     
     <!-- Footer -->
     
-    <div class="row" style="height: 100px; background-color: rgb(223, 223, 223);">
-      <div class="col pt-4">
-        
-          <ul class="list-inline text-center">
-            <li class="list-inline-item">
-              <a href="#">
-                <span class="fa-stack fa-lg">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <span class="fa-stack fa-lg">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <span class="fa-stack fa-lg">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-          </ul>
-     
-      </div>
+    <div class="row" style="height: 100px; background: rgb(180,180,255);
+    background: linear-gradient(170deg, rgba(180,180,255,1) 22%, rgba(198,255,191,1) 80%);;">
+      
     </div>
   
 

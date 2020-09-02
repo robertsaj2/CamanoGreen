@@ -3,7 +3,8 @@
 {% block title %}Camano Green Farm{% endblock %}
 {% block content %}
 
-  <div class="d-flex flex-row justify-content-around" style="padding-top: 50px; padding-bottom: 50px; margin-top: 125px; margin-bottom: 125px; background-color: rgb(218, 218, 218); border-radius: 5px;">
+  <div class="d-flex flex-row justify-content-around" style="padding-top: 50px; padding-bottom: 50px; margin-top: 125px; margin-bottom: 125px; background: rgb(247,247,247);
+  background: radial-gradient(circle, rgba(247,247,247,1) 19%, rgba(189,189,189,1) 100%);; border-radius: 5px; box-shadow: 3px 5px 4px 0px gray;">
 
     <div class="col-3">
       <div style="height: 532px; width: 400px" id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -19,56 +20,56 @@
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img class="d-block w-100" src="{{url_for('static', filename='assets/carousel1a.jpg')}}" alt="First slide">
+            <img style="border-radius: 5px;" class="d-block w-100" src="{{url_for('static', filename='assets/carousel1a.jpg')}}" alt="First slide">
             <div class="carousel-caption d-none d-md-block">
               <h5>Salad Greens</h5>
               <p>The freshest salad greens available.</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="{{url_for('static', filename='assets/carousel2a.jpg')}}" alt="Second slide">
+            <img style="border-radius: 5px;" class="d-block w-100" src="{{url_for('static', filename='assets/carousel2a.jpg')}}" alt="Second slide">
             <div class="carousel-caption d-none d-md-block">
               <h5>Tomatoes</h5>
               <p>Really good tomatoes.</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="{{url_for('static', filename='assets/carousel3a.jpg')}}"  alt="Third slide">
+            <img style="border-radius: 5px;" class="d-block w-100" src="{{url_for('static', filename='assets/carousel3a.jpg')}}"  alt="Third slide">
             <div class="carousel-caption d-none d-md-block">
               <h5>Lettuce</h5>
               <p>Lettuce, lettuce, lettuce.</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="{{url_for('static', filename='assets/carousel4a.jpg')}}"  alt="Third slide">
+            <img style="border-radius: 5px;" class="d-block w-100" src="{{url_for('static', filename='assets/carousel4a.jpg')}}"  alt="Third slide">
             <div class="carousel-caption d-none d-md-block">
               <h5>Lettuce</h5>
               <p>Different kinds of lettuce.</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="{{url_for('static', filename='assets/carousel5a.jpg')}}"  alt="Third slide">
+            <img style="border-radius: 5px;" class="d-block w-100" src="{{url_for('static', filename='assets/carousel5a.jpg')}}"  alt="Third slide">
             <div class="carousel-caption d-none d-md-block">
               <h5>Raddishes</h5>
               <p>Root vegetables.</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="{{url_for('static', filename='assets/carousel6a.jpg')}}"  alt="Third slide">
+            <img style="border-radius: 5px;" class="d-block w-100" src="{{url_for('static', filename='assets/carousel6a.jpg')}}"  alt="Third slide">
             <div class="carousel-caption d-none d-md-block">
               <h5>Herbs</h5>
               <p>Basil, thyme, rosemary</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="{{url_for('static', filename='assets/carousel7a.jpg')}}"  alt="Third slide">
+            <img style="border-radius: 5px;" class="d-block w-100" src="{{url_for('static', filename='assets/carousel7a.jpg')}}"  alt="Third slide">
             <div class="carousel-caption d-none d-md-block">
               <h5>...</h5>
               <p>...</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="{{url_for('static', filename='assets/carousel8a.jpg')}}"  alt="Third slide">
+            <img style="border-radius: 5px;" class="d-block w-100" src="{{url_for('static', filename='assets/carousel8a.jpg')}}"  alt="Third slide">
             <div class="carousel-caption d-none d-md-block">
               <h5>...</h5>
               <p>...</p>
@@ -91,7 +92,7 @@
         <h1>Camano Green</h1>
         <p>Camano Green is a small market garden operation on Camano Island.  I'll be offering a CSA service to a limited number of customers for 2021, please let me know if you're interested!</p>
       </div>
-      <img style="height: 300px; width: 399px" src="{{url_for('static', filename='assets/aaron.jpg')}}" alt="">
+      <img style="border-radius: 5px; height: 300px; width: 399px" src="{{url_for('static', filename='assets/aaron.jpg')}}" alt="">
     </div>
 
     <div class="col-3">
@@ -129,7 +130,7 @@
           <br>
           <div id="success"></div>
           <div class="form-group">
-            <button type="submit" class="btn btn-primary" id="sendMessageButton">Send</button>
+            <button type="submit" class="btn btn-success" id="sendMessageButton">Send</button>
           </div>
         </form>
       </div>
