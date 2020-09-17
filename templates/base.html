@@ -147,28 +147,28 @@
   <div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
     <!--Indicators-->
     <ol class="carousel-indicators">
-      <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
-      <li data-target="#carousel-example-1z" data-slide-to="1"></li>
-      <li data-target="#carousel-example-1z" data-slide-to="2"></li>
+      {% for carousel in carousel_data %}
+        {% if carousel['id']==0 %}
+          <li data-target="#carousel-example-1z" data-slide-to="{{ carousel['id'] }}" class="active"></li>
+        {% else %}
+          <li data-target="#carousel-example-1z" data-slide-to="{{ carousel['id'] }}"></li>
+        {% endif %}
+      {% endfor %}
     </ol>
     <!--/.Indicators-->
     <!--Slides-->
     <div class="carousel-inner" role="listbox">
-      <!--First slide-->
-      <div class="carousel-item active">
-        <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(141).jpg" alt="First slide">
-      </div>
-      <!--/First slide-->
-      <!--Second slide-->
-      <div class="carousel-item">
-        <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(136).jpg" alt="Second slide">
-      </div>
-      <!--/Second slide-->
-      <!--Third slide-->
-      <div class="carousel-item">
-        <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(137).jpg" alt="Third slide">
-      </div>
-      <!--/Third slide-->
+      {% for carousel in carousel_data %}
+        {% if carousel['id']==0 %}
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="{{ carousel['src'] }}" alt="{{ carousel['alt'] }}">
+          </div>
+        {% else %}
+          <div class="carousel-item">
+            <img class="d-block w-100" src="{{ carousel['src'] }}" alt="{{ carousel['alt'] }}">
+          </div>
+        {% endif %}
+      {% endfor %}
     </div>
     <!--/.Slides-->
     <!--Controls-->
