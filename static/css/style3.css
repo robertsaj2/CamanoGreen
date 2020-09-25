@@ -23,7 +23,7 @@ header,
 }
 
 .top-nav-collapse {
-  background-color: #3f51b5 !important;
+  background-color: #365ea8 !important;
 }
 
 .navbar:not(.top-nav-collapse) {
@@ -37,13 +37,13 @@ header,
 }
 
 .rgba-gradient {
-  background: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(21, 201, 36, 0.4) 100%);
+  background: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(105, 187, 112, 0.4) 100%);
   background: -webkit-gradient(linear, 45deg, from(rgba(0, 0, 0, 0.7), rgba(47, 221, 24, 0.4) 100%));
   background: linear-gradient(to 45deg, rgba(0, 0, 0, 0.7), rgba(79, 255, 56, 0.4) 100%);
 }
 
 .card {
-  background-color: rgba(3, 182, 62, 0.2);
+  background-color: rgba(129, 160, 135, 0.2);
 }
 
 .md-form label {

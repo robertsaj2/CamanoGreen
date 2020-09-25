@@ -72,12 +72,19 @@
           <div class="row mt-5">
             <!--Grid column-->
             <div class="col-md-6 mb-5 mt-md-0 mt-5 white-text text-center text-md-left">
-              <h1 class="h1-responsive font-weight-bold wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-name: fadeInLeft; animation-delay: 0.3s;">Sign up right now! </h1>
+              <h1 class="h1-responsive font-weight-bold wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-name: fadeInLeft; animation-delay: 0.3s;">Coming Spring 2021</h1>
               <hr class="hr-light wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-name: fadeInLeft; animation-delay: 0.3s;">
-              <h6 class="mb-3 wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-name: fadeInLeft; animation-delay: 0.3s;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus quasi fuga
-              nesciunt dolorum nulla magnam veniam sapiente, fugiat! Commodi sequi non animi ea
-              dolor molestiae, quisquam iste, maiores. Nulla.</h6>
-              <a class="btn btn-outline-white wow fadeInLeft waves-effect waves-light" data-wow-delay="0.3s" style="visibility: visible; animation-name: fadeInLeft; animation-delay: 0.3s;">Learn more</a>
+              <h6 class="mb-3 wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-name: fadeInLeft; animation-delay: 0.3s;">
+                Hi there, my name is Aaron.  I'm starting a farm called Camano Green on which I'll be growing seasonal produce.  
+                <br><br>
+                I'm a beginning farmer so I'll only be taking a limited number of customers for next Spring.  
+                I will have a farmstand at my home on Camano Island and I will also do weekly produce deliveries.
+                <br><br>
+                If you'd like to be a part of my first season or if you have any questions, please feel free to send me a message via the form on this page.
+                <br><br>
+                I look forward to hearing from you!
+              </h6>
+              <!-- <a class="btn btn-outline-white wow fadeInLeft waves-effect waves-light" data-wow-delay="0.3s" style="visibility: visible; animation-name: fadeInLeft; animation-delay: 0.3s;">Learn more</a> -->
             </div>
             <!--Grid column-->
             <!--Grid column-->
@@ -107,7 +114,7 @@
                     <input type="password" id="form4" class="white-text form-control">
                     <label for="form4" class="">Your message</label>
                   </div>
-                  <div class="text-center mt-4">
+                  <!-- <div class="text-center mt-4">
                     <button class="btn btn-indigo waves-effect waves-light">Send</button>
                     <hr class="hr-light mb-3 mt-4">
                     <div class="inline-ul text-center d-flex justify-content-center">
@@ -121,7 +128,7 @@
                         <i class="fab fa-instagram white-text"> </i>
                       </a>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
               </div>
               <!--/.Form-->
@@ -189,7 +196,7 @@
       <div class="row py-5">
         <!--Grid column-->
         <div class="col-md-12 text-center">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>Here are some photos of what I've been growing.</p>
         </div>
         <!--Grid column-->
       </div>
@@ -198,29 +205,33 @@
   </main>
     <!--Main Layout-->
 
-    <footer style="background-color: #4050b5" >
-      <div class="container">
+    <!-- <footer style="background-color: #4050b5" > -->
+      <!-- <div class="container"> -->
         <!--Grid row-->
-        <div class="row py-5">
+        <!-- <div class="row py-5"> -->
           <!--Grid column-->
-          <div class="col-md-12 text-center">
-            <p class="white-text">footer text</p>
-          </div>
+          <!-- <div class="col-md-12 text-center"> -->
+            <!-- <p class="white-text">footer text</p> -->
+          <!-- </div> -->
           <!--Grid column-->
-        </div>
+        <!-- </div> -->
         <!--Grid row-->
-      </div>
-    </footer>
+      <!-- </div> -->
+    <!-- </footer> -->
       <!--Footer Layout-->
     
  <!-- jQuery -->
-  <script type="text/javascript" src="../static/js/jquery.min.js"></script>
+  <!-- <script type="text/javascript" src="../static/js/jquery.min.js"></script> -->
+  <script type="text/javascript" src="{{ url_for('static',filename='js/jquery.min.js')}}"></script>
   <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="../static/js/popper.min.js"></script>
+  <!-- <script type="text/javascript" src="../static/js/popper.min.js"></script> -->
+  <script type="text/javascript" src="{{ url_for('static',filename='js/popper.min.js') }}"></script>
   <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+  <!-- <script type="text/javascript" src="../static/js/bootstrap.min.js"></script> -->
+  <script type="text/javascript" src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
   <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="../static/js/mdb.min.js"></script>
+  <!-- <script type="text/javascript" src="../static/js/mdb.min.js"></script> -->
+  <script type="text/javascript" src="{{ url_for('static',filename='js/mdb.min.js') }}"></script>
   <!-- Your custom scripts (optional) -->
   
 </body>

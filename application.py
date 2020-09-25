@@ -25,35 +25,35 @@ Message:
 $message
 """)
 
-def login_required(f):
-    @wraps(f)
-    def decorated_function(*args, **kwargs):
-        if not ('logged_in' in session and session['logged_in']):
-            return redirect(url_for('login'))
-        return f(*args, **kwargs)
-    return decorated_function
+# def login_required(f):
+#     @wraps(f)
+#     def decorated_function(*args, **kwargs):
+#         if not ('logged_in' in session and session['logged_in']):
+#             return redirect(url_for('login'))
+#         return f(*args, **kwargs)
+#     return decorated_function
 
-@application.route('/login',methods=['POST','GET'])
-def login():
-    if request.method == 'POST':
-        username = request.form.get('username')
-        password = request.form.get('password')
-        if (username == admin_username) and (password == admin_password):
-            session['logged_in'] = True
-            return redirect('/')
-        else:
-            return "<h3>Wrong user name or password.</h3>"
-    elif request.method == 'GET':
-        return render_template('login.html')
+# @application.route('/login',methods=['POST','GET'])
+# def login():
+#     if request.method == 'POST':
+#         username = request.form.get('username')
+#         password = request.form.get('password')
+#         if (username == admin_username) and (password == admin_password):
+#             session['logged_in'] = True
+#             return redirect('/')
+#         else:
+#             return "<h3>Wrong user name or password.</h3>"
+#     elif request.method == 'GET':
+#         return render_template('login.html')
 
 
 @application.route('/')
 @application.route('/index')
 def index():
-    carousel_folder = os.path.join('static','assets')
+    static_assets_folder = os.path.join('static','assets')
     # make list of files in assets that have 'carousel' in them
     # include the path so we can pass it to the templates
-    carousel_imgs = [os.path.join(carousel_folder,img) for img in os.listdir(carousel_folder) if 'carousel' in img]
+    carousel_imgs = [os.path.join(static_assets_folder,img) for img in os.listdir(static_assets_folder) if 'carousel' in img]
     # create all the attributes the css will need so we can define things in 
     # a for-loop in the templates
     carousel_data = []
@@ -66,7 +66,7 @@ def index():
         })
     template_kwargs = {
         # 'env': env,
-        'carousel_data': carousel_data
+        'carousel_data': carousel_data,
     }
     # return render_template('index.html',**template_kwargs)
     return render_template('coming_soon.html',**template_kwargs)
