@@ -71,6 +71,29 @@ def index():
     # return render_template('index.html',**template_kwargs)
     return render_template('coming_soon.html',**template_kwargs)
 
+@application.route('/gallery')
+def gallery():
+    static_assets_folder = os.path.join('static','assets')
+    # make list of files in assets that have 'carousel' in them
+    # include the path so we can pass it to the templates
+    carousel_imgs = [os.path.join(static_assets_folder,img) for img in os.listdir(static_assets_folder) if 'carousel' in img]
+    # create all the attributes the css will need so we can define things in 
+    # a for-loop in the templates
+    carousel_data = []
+    for i,img in enumerate(carousel_imgs):
+        carousel_data.append({
+            'id': i,
+            'data-slide-to': i,
+            'src': img,
+            'alt': 'Slide %d' % i
+        })
+    template_kwargs = {
+        # 'env': env,
+        'carousel_data': carousel_data,
+    }
+    # return render_template('index.html',**template_kwargs)
+    return render_template('gallery.html',**template_kwargs)    
+
 # @application.route('/products')
 # @login_required
 # def products():

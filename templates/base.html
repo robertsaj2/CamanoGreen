@@ -26,11 +26,11 @@
   </head>
   
   
-<body aria-busy="true">
+<body aria-busy="true" onload="updateActiveNav()">
   <!-- Main navigation -->
   <header>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+    <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
       <div class="container">
         <a class="navbar-brand" href="#">
           <img src="{{url_for('static', filename='assets/camanogreen-logo-only1.png')}}" style="height: 50px; width: 50px"/>
@@ -41,23 +41,14 @@
         </button>
         <div class="collapse navbar-collapse float-right" id="navbarSupportedContent-7">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link waves-effect waves-light" href="#">Home
-                <span class="sr-only">(current)</span>
+            <li id="navHome" class="nav-item">
+              <a class="nav-link waves-effect waves-light" href="/">Home
               </a>
             </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link waves-effect waves-light" href="#">Link</a>
+            <li id="navGallery" class="nav-item">
+              <a class="nav-link waves-effect waves-light" href="/gallery">Gallery</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link waves-effect waves-light" href="#">Profile</a>
-            </li> -->
           </ul>
-          <!-- <form class="form-inline">
-            <div class="md-form my-0">
-              <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            </div>
-          </form> -->
         </div>
       </div>
     </nav>
@@ -89,49 +80,8 @@
             <!--Grid column-->
             <!--Grid column-->
             <div class="col-md-6 col-xl-5 mb-4">
-              <!--Form-->
-              <div class="card wow fadeInRight" data-wow-delay="0.3s" style="visibility: visible; animation-name: fadeInRight; animation-delay: 0.3s;">
-                <div class="card-body">
-                  <!--Header-->
-                  <div class="text-center">
-                    <h3 class="white-text">
-                      <i class="fas fa-user white-text"></i> Say Hello:</h3>
-                    <hr class="hr-light">
-                  </div>
-                  <!--Body-->
-                  <div class="md-form">
-                    <i class="fas fa-user prefix white-text"></i>
-                    <input type="text" id="form3" class="white-text form-control">
-                    <label for="form3" class="">Your name</label>
-                  </div>
-                  <div class="md-form">
-                    <i class="fas fa-at prefix white-text"></i>
-                    <input type="email" id="form2" class="white-text form-control">
-                    <label for="form2" class="">Your email</label>
-                  </div>
-                  <div class="md-form">
-                    <i class="fas fa-envelope-open-text prefix white-text"></i>
-                    <input type="password" id="form4" class="white-text form-control">
-                    <label for="form4" class="">Your message</label>
-                  </div>
-                  <!-- <div class="text-center mt-4">
-                    <button class="btn btn-indigo waves-effect waves-light">Send</button>
-                    <hr class="hr-light mb-3 mt-4">
-                    <div class="inline-ul text-center d-flex justify-content-center">
-                      <a class="p-2 m-2 tw-ic">
-                        <i class="fab fa-twitter white-text"></i>
-                      </a>
-                      <a class="p-2 m-2 li-ic">
-                        <i class="fab fa-linkedin-in white-text"> </i>
-                      </a>
-                      <a class="p-2 m-2 ins-ic">
-                        <i class="fab fa-instagram white-text"> </i>
-                      </a>
-                    </div>
-                  </div> -->
-                </div>
-              </div>
-              <!--/.Form-->
+              {% block content %}
+              {% endblock %}
             </div>
             <!--Carousel Wrapper-->
             <!--Grid column-->
@@ -144,67 +94,6 @@
     </div>
     <!-- Full Page Intro -->
   </header>
-  <!-- Main navigation -->
-  <!--Main Layout-->
-
-
-  <main>
-    <div class="container mt-5 d-flex flex-column align-items-center">
-      
-  <div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel" style="height: 532px; width: 400px">
-    <!--Indicators-->
-    <ol class="carousel-indicators">
-      {% for carousel in carousel_data %}
-        {% if carousel['id']==0 %}
-          <li data-target="#carousel-example-1z" data-slide-to="{{ carousel['id'] }}" class="active"></li>
-        {% else %}
-          <li data-target="#carousel-example-1z" data-slide-to="{{ carousel['id'] }}"></li>
-        {% endif %}
-      {% endfor %}
-    </ol>
-    <!--/.Indicators-->
-    <!--Slides-->
-    <div class="carousel-inner" role="listbox">
-      {% for carousel in carousel_data %}
-        {% if carousel['id']==0 %}
-          <div class="carousel-item active">
-            <img class="d-block w-100" src="{{ carousel['src'] }}" alt="{{ carousel['alt'] }}">
-          </div>
-        {% else %}
-          <div class="carousel-item">
-            <img class="d-block w-100" src="{{ carousel['src'] }}" alt="{{ carousel['alt'] }}">
-          </div>
-        {% endif %}
-      {% endfor %}
-    </div>
-    <!--/.Slides-->
-    <!--Controls-->
-    <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <i class="fas fa-angle-left fa-3x white-text"></i>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <i class="fas fa-angle-right fa-3x white-text"></i>
-      <span class="sr-only">Next</span>
-    </a>
-    <!--/.Controls-->
-  </div>
-  <!--/.Carousel Wrapper-->
-      <!--Grid row-->
-      <div class="row py-5">
-        <!--Grid column-->
-        <div class="col-md-12 text-center">
-          <p>Here are some photos of what I've been growing.</p>
-        </div>
-        <!--Grid column-->
-      </div>
-      <!--Grid row-->
-    </div>
-  </main>
-    <!--Main Layout-->
-
     <!-- <footer style="background-color: #4050b5" > -->
       <!-- <div class="container"> -->
         <!--Grid row-->
@@ -233,6 +122,20 @@
   <!-- <script type="text/javascript" src="../static/js/mdb.min.js"></script> -->
   <script type="text/javascript" src="{{ url_for('static',filename='js/mdb.min.js') }}"></script>
   <!-- Your custom scripts (optional) -->
+  <script>
+    function updateActiveNav() {
+      x = window.location.href
+      if (x.endsWith('/')) {
+        var activeNav = document.getElementById('navHome');
+        console.log('home');
+      } else if (x.endsWith('/gallery')) {
+        var activeNav = document.getElementById('navGallery');
+        console.log('gallery');
+      }
+      activeNav.classList.add('active');
+    }
+
+  </script>
   
 </body>
 </html>
