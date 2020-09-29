@@ -64,3 +64,11 @@ h6 {
   align-items: center; 
   border-radius: 5px;
 }
+
+#content-container {
+  height: 600px; 
+  display: flex; 
+  flex-direction: row; 
+  justify-content: center; 
+  align-items: center
+}
