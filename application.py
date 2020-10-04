@@ -4,7 +4,7 @@ import os
 import json
 
 from string import Template
-# from mail import send_message
+from mail import send_message
 
 from functools import wraps
 
@@ -16,11 +16,10 @@ application.secret_key = os.urandom(12)
 # admin_password = os.environ['CG_ADMIN_PASSWORD']
 
 email_template = Template("""\
-Subject: New Message From Blog
+Subject: New Message From Website
 
 From: $name
 Email: $email
-Phone: $phone
 Message:
 $message
 """)
@@ -91,40 +90,29 @@ def gallery():
         # 'env': env,
         'carousel_data': carousel_data,
     }
-    # return render_template('index.html',**template_kwargs)
     return render_template('gallery.html',**template_kwargs)    
 
-# @application.route('/products')
+@application.route('/contact',methods=['POST'])
 # @login_required
-# def products():
-#     template_kwargs = {
-#         'env': env
-#     }
-#     return render_template('products.html',**template_kwargs)    
-
-# @application.route('/contact',methods=['GET','POST'])
-# @login_required
-# def contact():
-#     template_kwargs = {
-#         'env': env
-#     }
-#     if request.method == 'GET':
-#         return render_template('contact.html',**template_kwargs)
-#     elif request.method == 'POST':
-#         name = request.form.get('name')
-#         email = request.form.get('email')
-#         phone = request.form.get('phone')
-#         message = request.form.get('message')
-#         email_kwargs = {
-#             'name': name,
-#             'email': email,
-#             'phone': phone,
-#             'message': message
-#         }
-#         formatted_email = email_template.substitute(**email_kwargs)
-#         # send_message(formatted_email)
-#         print("Commented out send_message() call.")
-#         return redirect('/')
+def contact():
+    # template_kwargs = {
+    #     'env': env
+    # }
+    if request.method == 'POST':
+        name = request.form.get('name')
+        email = request.form.get('email')
+        message = request.form.get('message')
+        email_kwargs = {
+            'name': name,
+            'email': email,
+            'message': message
+        }
+        # print(email_kwargs)
+        formatted_email = email_template.substitute(**email_kwargs)
+        # print('\n\n')
+        # print(formatted_email)
+        send_message(formatted_email)
+        return redirect('/')
 
 # # single post
 # @application.route('/blog/<template_str>')

@@ -16,7 +16,7 @@ def create_service():
     # The file token.pickle stores the user's access and refresh tokens, and is
     # created automatically when the authorization flow completes for the first
     # time.
-    with open(os.path.join('.credentials','token.pickle'), 'rb') as token:
+    with open(os.path.join('credentials','token.pickle'), 'rb') as token:
         creds = pickle.load(token)
 
     service = build('gmail', 'v1', credentials=creds)
@@ -24,8 +24,8 @@ def create_service():
 
 def create_message(message_text):
     message = MIMEText(message_text)
-    message['to'] = 'microgreensnw@gmail.com'
-    message['from'] = 'microgreensnw@gmail.com'
+    message['to'] = 'camanogreenfarm@gmail.com'
+    message['from'] = 'camanogreenfarm@gmail.com'
     message['subject'] = 'New Message From Website'
     return {'raw': base64.urlsafe_b64encode(message.as_string().encode()).decode()}
 
@@ -33,7 +33,7 @@ def send_message(message):
 
   service = create_service()
   try:
-    message = (service.users().messages().send(userId='microgreensnw@gmail.com', body=create_message(message))
+    message = (service.users().messages().send(userId='camanogreenfarm@gmail.com', body=create_message(message))
                .execute())
     return message
   except errors.HttpError as error:

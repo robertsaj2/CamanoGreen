@@ -13,36 +13,38 @@
         <hr class="hr-light">
       </div>
       <!--Body-->
-      <div class="md-form">
-        <i class="fas fa-user prefix white-text"></i>
-        <input type="text" id="form3" class="white-text form-control">
-        <label for="form3" class="">Your name</label>
-      </div>
-      <div class="md-form">
-        <i class="fas fa-at prefix white-text"></i>
-        <input type="email" id="form2" class="white-text form-control">
-        <label for="form2" class="">Your email</label>
-      </div>
-      <div class="md-form">
-        <i class="fas fa-envelope-open-text prefix white-text"></i>
-        <input type="password" id="form4" class="white-text form-control">
-        <label for="form4" class="">Your message</label>
-      </div>
-      <div class="text-center mt-4">
-        <button class="btn btn-indigo waves-effect waves-light">Send</button>
-        <!-- <hr class="hr-light mb-3 mt-4">
-        <div class="inline-ul text-center d-flex justify-content-center">
-          <a class="p-2 m-2 tw-ic">
-            <i class="fab fa-twitter white-text"></i>
-          </a>
-          <a class="p-2 m-2 li-ic">
-            <i class="fab fa-linkedin-in white-text"> </i>
-          </a>
-          <a class="p-2 m-2 ins-ic">
-            <i class="fab fa-instagram white-text"> </i> -->
-          </a>
+      <form action="/contact" method="POST" role="form">
+        <div class="md-form">
+          <i class="fas fa-user prefix white-text"></i>
+          <input type="text" id="form3" class="white-text form-control" name="name">
+          <label for="form3" class="">Your name</label>
         </div>
-      </div>
+        <div class="md-form">
+          <i class="fas fa-at prefix white-text"></i>
+          <input type="email" id="form2" class="white-text form-control" name="email">
+          <label for="form2" class="">Your email</label>
+        </div>
+        <div class="md-form">
+          <i class="fas fa-envelope-open-text prefix white-text"></i>
+          <input type="text" id="form4" class="white-text form-control" name="message">
+          <label for="form4" class="">Your message</label>
+        </div>
+        <div class="text-center mt-4">
+          <button class="btn btn-indigo waves-effect waves-light">Send</button>
+          <!-- <hr class="hr-light mb-3 mt-4">
+          <div class="inline-ul text-center d-flex justify-content-center">
+            <a class="p-2 m-2 tw-ic">
+              <i class="fab fa-twitter white-text"></i>
+            </a>
+            <a class="p-2 m-2 li-ic">
+              <i class="fab fa-linkedin-in white-text"> </i>
+            </a>
+            <a class="p-2 m-2 ins-ic">
+              <i class="fab fa-instagram white-text"> </i>
+            </a>
+          </div> -->
+        </div>
+      </form>
     </div>
   </div>
   <!--/.Form-->
