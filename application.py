@@ -9,11 +9,6 @@ from mail import send_message
 from functools import wraps
 
 application = Flask(__name__)
-application.secret_key = os.urandom(12)
-
-# env = os.environ['CG_FLASK_ENV']
-# admin_username = os.environ['CG_ADMIN_USER']
-# admin_password = os.environ['CG_ADMIN_PASSWORD']
 
 email_template = Template("""\
 Subject: New Message From Website
@@ -135,6 +130,4 @@ def contact():
 #     return send_from_directory(application.static_folder, request.path[1:])
 
 if __name__ == '__main__':
-    application.jinja_env.auto_reload = True
-    application.config['TEMPLATES_AUTO_RELOAD'] = True
-    application.run(debug=True, host='0.0.0.0')
+    application.run()
