@@ -59,23 +59,40 @@ h6 {
   align-content: center;
 }
 
+#carousel-example-1z {
+  height: 532px; 
+  width: 400px;
+}
+
 @media (max-width: 991px) {
   .navbar:not(.top-nav-collapse) {
     background: #3f51b5 !important;
   }
+  #carousel-example-1z {
+    height: 399px; 
+    width: 300px;
+  }
+  #carousel-container {
+    height: 410px; 
+    width: 310px; 
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
+
 
 @media (max-width: 768px) {
   html,
   body,
   header,
   .view {
-    height: 1000px;
+    height: 1075px;
   }
   #mask1 {
     display: flex; 
     flex-direction: column; 
     justify-content: start; 
-    align-content: center;
+    align-items: center;
   }
+ 
 }
