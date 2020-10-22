@@ -11,3 +11,6 @@ The development workflow should run as follows:
 4. Checkout dev, and merge the branch containing the work
 5. When all proposed changes are finished, merge to master
 6. Redeploy master
+
+
+must set `CG_FLASK_ENV` environment variable to run locally
